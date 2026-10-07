@@ -2,7 +2,7 @@ import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 const root = fileURLToPath(new URL('.', import.meta.url));
-const files = {'/':'index.html','/index.html':'index.html','/style.css':'style.css','/app.js':'app.js','/quiz.js':'quiz.js'};
+const files = {'/':'index.html','/index.html':'index.html','/style.css':'style.css','/app.js':'app.js','/quiz.js':'quiz.js','/tokens.css':'tokens.css','/design-system.html':'design-system.html','/design-system.css':'design-system.css'};
 createServer(async(req,res)=>{
  const file=files[new URL(req.url,'http://localhost').pathname];
  if(!file){res.writeHead(404);return res.end('Não encontrado');}
