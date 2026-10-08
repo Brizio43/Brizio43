@@ -6,13 +6,13 @@ Quizzes individuais, progresso de estudo e a coleção de recompensas são guard
 
 ## Quizzes a partir de imagens
 
-No criador, selecione uma imagem PNG, JPG ou WebP de até 10 MB e 25 megapixels. Clique em **Extrair texto da imagem**: ao concluir o reconhecimento, o app gera automaticamente três exercícios para cada trecho legível do conteúdo, sem o antigo limite de dez questões:
+No criador, selecione uma imagem PNG, JPG ou WebP de até 10 MB e 25 megapixels. Clique em **Extrair texto da imagem**: ao concluir o reconhecimento, o app gera automaticamente uma questão por trecho legível do conteúdo, sem o antigo limite de dez questões. Cada questão tem um único tipo, distribuído entre os blocos:
 
-- **Múltipla escolha:** escolha o termo que completa o trecho, com quatro alternativas.
+- **Múltipla escolha:** escolha o termo que completa o trecho, com quatro alternativas distintas, geradas e preenchidas automaticamente.
 - **Completar frases:** digite a palavra ausente. A correção ignora diferenças de caixa, acentos e pontuação.
 - **Descritivo:** explique a informação com suas palavras e compare com a resposta de referência. Não há nota automática para esse tipo.
 
-Cada questão possui uma dica acessível pelo botão **Dica**, que pode ser aberta e ocultada sem perder a resposta digitada. No editor, perguntas, tipos, respostas, explicações e dicas podem ser alterados. Os quizzes antigos continuam funcionando como múltipla escolha e recebem uma dica padrão se não tiverem uma dica salva.
+Cada questão possui uma dica acessível pelo botão **Dica**, que pode ser aberta e ocultada sem perder a resposta digitada. No editor, perguntas, tipos, respostas, explicações e dicas podem ser alterados. Mudar o tipo substitui o formato da questão; ao escolher múltipla escolha, todas as alternativas são preenchidas automaticamente. Para questões manuais, informe e marque a resposta correta e use **Gerar alternativas automaticamente** para preencher as outras opções. Os quizzes antigos continuam funcionando como múltipla escolha e recebem uma dica padrão se não tiverem uma dica salva.
 
 Revise o texto reconhecido e use **Gerar todas as questões do conteúdo** para atualizar os exercícios. A regeneração substitui as sugestões geradas anteriormente, preservando questões criadas manualmente. Não há duplicação a cada clique. A geração é local, baseada em regras e no próprio texto; não usa IA nem acrescenta conhecimento externo. As linhas quebradas do OCR são reunidas antes da separação por término de frase. A frase inteira fica em uma única questão de completar, incluindo frases longas e trechos separados por ponto e vírgula. Repetições do mesmo trecho são removidas. Conteúdo somente com símbolos não gera questões. Erros de OCR podem produzir exercícios incorretos: revise o resultado antes de salvar.
 
@@ -45,7 +45,7 @@ O progresso, as respostas confirmadas e os rascunhos ficam salvos neste navegado
 
 Respostas objetivas incorretas mostram imediatamente a resposta correta e a explicação. Descritivas sempre mostram a referência para comparação, sem julgamento automático. Na revisão final, todas as questões mostram o gabarito ou referência, incluindo as deixadas em branco; questões objetivas em branco contam como não acertadas na porcentagem.
 
-Trechos repetidos não geram exercícios duplicados. Perguntas repetidas do mesmo tipo são removidas durante geração e importação e rejeitadas no salvamento manual. Regenerar não acumula cópias. Os três formatos podem trabalhar o mesmo conceito, mas cada exercício é único dentro do seu tipo.
+Trechos repetidos não geram exercícios duplicados. Perguntas repetidas do mesmo tipo são removidas durante geração e importação e rejeitadas no salvamento manual. Regenerar não acumula cópias. Cada trecho do conteúdo gera somente uma questão, sem repetir o mesmo trecho em outros tipos. Os tipos são alternados na ordem do conteúdo antes da organização em blocos; conteúdos de uma ou duas frases geram somente uma ou duas questões.
 
 O visual usa https://onefin.framer.website/ como referência de composição, gradientes e superfícies, mantendo azul e laranja.
 

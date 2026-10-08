@@ -3,12 +3,12 @@ import assert from 'node:assert/strict';
 import {uniqueQuestions,groupedQuestions,nextPending,restoreSession} from '../quiz-session.js';
 import {questionsFromText} from '../image-quiz.js';
 import {score} from '../quiz.js';
-const source='As plantas absorvem nutrientes pelas raízes. A energia luminosa permite a fotossíntese.';
+const source='As plantas absorvem nutrientes pelas raízes. A energia luminosa permite a fotossíntese. A clorofila participa do processo.';
 test('conteúdo repetido e regeneração não duplicam exercícios; tipos ficam em blocos',()=>{
  const once=questionsFromText(source),repeated=questionsFromText(source+' '+source.toUpperCase());
  assert.equal(repeated.length,once.length);
  assert.equal(uniqueQuestions([...once,...once]).length,once.length);
- assert.deepEqual(groupedQuestions([...once].reverse()).map(q=>q.type),['multiple','multiple','fill','fill','descriptive','descriptive']);
+ assert.deepEqual(groupedQuestions([...once].reverse()).map(q=>q.type),['multiple','fill','descriptive']);
 });
 test('avanço não repete respondidas; pular todas abre revisão e brancos são preservados',()=>{
  assert.equal(nextPending(['answered','skipped','pending','blank'],0),2);
