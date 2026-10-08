@@ -8,7 +8,10 @@ test('conteúdo repetido e regeneração não duplicam exercícios; tipos ficam 
  const once=questionsFromText(source),repeated=questionsFromText(source+' '+source.toUpperCase());
  assert.equal(repeated.length,once.length);
  assert.equal(uniqueQuestions([...once,...once]).length,once.length);
- assert.deepEqual(groupedQuestions([...once].reverse()).map(q=>q.type),['multiple','fill','descriptive']);
+ const order={multiple:0,fill:1,descriptive:2};
+ const grouped=groupedQuestions([...once].reverse());
+ assert.deepEqual(grouped.map(q=>order[q.type]),grouped.map(q=>order[q.type]).sort((a,b)=>a-b));
+ assert.ok(grouped.length>3);
 });
 test('avanço não repete respondidas; pular todas abre revisão e brancos são preservados',()=>{
  assert.equal(nextPending(['answered','skipped','pending','blank'],0),2);

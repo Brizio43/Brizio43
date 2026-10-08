@@ -6,11 +6,11 @@ Quizzes individuais, progresso de estudo e a coleção de recompensas são guard
 
 ## Quizzes a partir de imagens
 
-No criador, selecione uma imagem PNG, JPG ou WebP de até 10 MB e 25 megapixels. Clique em **Extrair texto da imagem**: ao concluir o reconhecimento, o app gera automaticamente uma questão por trecho legível do conteúdo, sem o antigo limite de dez questões. Cada questão tem um único tipo, distribuído entre os blocos:
+No criador, selecione uma imagem PNG, JPG ou WebP de até 10 MB e 25 megapixels. Clique em **Extrair texto da imagem**: ao concluir o reconhecimento, o app gera automaticamente várias questões sobre os temas e detalhes identificados no conteúdo, sem o antigo limite de dez questões. Cada pergunta tem um único tipo, distribuído entre os blocos:
 
-- **Múltipla escolha:** escolha o termo que completa o trecho, com quatro alternativas distintas, geradas e preenchidas automaticamente.
+- **Múltipla escolha:** identifique conceitos a partir de suas características ou complete informações sobre os temas estudados, com quatro alternativas distintas, geradas e preenchidas automaticamente.
 - **Completar frases:** digite a palavra ausente. A correção ignora diferenças de caixa, acentos e pontuação.
-- **Descritivo:** explique a informação com suas palavras e compare com a resposta de referência. Não há nota automática para esse tipo.
+- **Descritivo:** explique relações entre os conceitos do material com suas palavras e compare com a resposta de referência. Não há nota automática para esse tipo.
 
 Cada questão possui uma dica acessível pelo botão **Dica**, que pode ser aberta e ocultada sem perder a resposta digitada. No editor, perguntas, tipos, respostas, explicações e dicas podem ser alterados. Mudar o tipo substitui o formato da questão; ao escolher múltipla escolha, todas as alternativas são preenchidas automaticamente. Para questões manuais, informe e marque a resposta correta e use **Gerar alternativas automaticamente** para preencher as outras opções. Os quizzes antigos continuam funcionando como múltipla escolha e recebem uma dica padrão se não tiverem uma dica salva.
 
@@ -45,7 +45,7 @@ O progresso, as respostas confirmadas e os rascunhos ficam salvos neste navegado
 
 Respostas objetivas incorretas mostram imediatamente a resposta correta e a explicação. Descritivas sempre mostram a referência para comparação, sem julgamento automático. Na revisão final, todas as questões mostram o gabarito ou referência, incluindo as deixadas em branco; questões objetivas em branco contam como não acertadas na porcentagem.
 
-Trechos repetidos não geram exercícios duplicados. Perguntas repetidas do mesmo tipo são removidas durante geração e importação e rejeitadas no salvamento manual. Regenerar não acumula cópias. Cada trecho do conteúdo gera somente uma questão, sem repetir o mesmo trecho em outros tipos. Os tipos são alternados na ordem do conteúdo antes da organização em blocos; conteúdos de uma ou duas frases geram somente uma ou duas questões.
+Trechos repetidos não geram exercícios duplicados. Perguntas repetidas do mesmo tipo são removidas durante geração e importação e rejeitadas no salvamento manual. Regenerar não acumula cópias. Um mesmo tema pode gerar várias perguntas distintas: identificação do conceito, uma frase inteira para completar, explicação de relações e perguntas sobre outros termos relevantes. Não há mais o limite de uma pergunta por trecho. A quantidade acompanha o conteúdo disponível, sem inventar fatos: um título isolado não oferece informações suficientes para exercícios de relações. Há somente uma questão de completar por frase original; as perguntas adicionais exploram outros aspectos em múltipla escolha ou formato descritivo. Cada pergunta mantém somente um tipo de exercício, com seus próprios campos de resposta. Cada trecho fornece até duas perguntas adicionais de múltipla escolha sobre termos distintos, além da identificação do conceito, da frase completa e da relação descritiva quando há informações suficientes.
 
 O visual usa https://onefin.framer.website/ como referência de composição, gradientes e superfícies, mantendo azul e laranja.
 
