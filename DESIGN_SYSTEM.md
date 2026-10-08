@@ -1,10 +1,10 @@
 # Design system — Quiz Estudo
 
-Versão 1.0. Referência visual: `design-system.html`. Tokens: `tokens.css`. Componentes compartilhados com o app: `style.css`. A página de referência não altera quizzes ou dados do usuário.
+Versão 1.1. Referência visual: `design-system.html`. Tokens: `tokens.css`. Componentes compartilhados com o app: `style.css`. A página de referência não altera quizzes ou dados do usuário.
 
 ## Direção
 
-Uma interface calma, legível e acolhedora para criar questões e aprender com os resultados. Preserve a identidade verde existente. Priorize conteúdo sobre decoração e mantenha uma ação principal em cada grupo.
+Uma interface calma, legível e acolhedora para criar questões e aprender com os resultados. Azul (#2455DB) orienta ações e estrutura a interface; laranja (#EE7B2C) destaca progresso e aprendizado. Use texto escuro sobre laranja claro para preservar legibilidade. Priorize conteúdo sobre decoração e mantenha uma ação principal em cada grupo.
 
 ## Tokens
 

@@ -1,27 +1,28 @@
-/* Quiz Estudo · semantic design tokens · v1.0 */
+/* Quiz Estudo · semantic design tokens · v1.1 */
 :root {
-  --color-primary: #22584c;
-  --color-primary-hover: #174336;
-  --color-primary-soft: #edf3e6;
+  --color-primary: #2455db;
+  --color-primary-hover: #1941b4;
+  --color-primary-soft: #edf2ff;
   --color-on-primary: #ffffff;
-  --color-canvas: #f5f7f2;
+  --color-canvas: #f5f7fc;
   --color-surface: #ffffff;
-  --color-field: #fbfcfa;
-  --color-text: #223e36;
-  --color-muted: #607368;
-  --color-border: #dce4d9;
-  --color-control-border: #83958a;
-  --color-accent-soft: #e7efda;
-  --color-accent-text: #49603a;
+  --color-field: #fafbff;
+  --color-text: #172747;
+  --color-muted: #586783;
+  --color-border: #e1e7f2;
+  --color-control-border: #8798b5;
+  --color-accent: #ee7b2c;
+  --color-accent-soft: #fff1e4;
+  --color-accent-text: #a3440c;
   --color-success: #327347;
   --color-success-soft: #e5f2e6;
   --color-danger: #a43e38;
   --color-danger-soft: #fbece9;
   --color-danger-border: #c56657;
-  --color-focus: #22584c;
-  --color-track: #e8eedf;
-  --color-progress: #557e42;
-  --color-disabled: #e5eae2;
+  --color-focus: #2455db;
+  --color-track: #e4eafd;
+  --color-progress: #ee7b2c;
+  --color-disabled: #e7ecf5;
   --font-body: 'DM Sans', system-ui, sans-serif;
   --font-heading: 'Manrope', system-ui, sans-serif;
   --text-xs: 0.75rem;
@@ -46,7 +47,7 @@
   --radius-md: 14px;
   --radius-lg: 20px;
   --radius-xl: 28px;
-  --shadow-card: 0 3px 12px rgb(34 62 54 / 3%);
+  --shadow-card: 0 3px 12px rgb(23 39 71 / 6%);
   --motion-fast: 150ms ease;
   --layout-wide: 1064px;
   --layout-reading: 740px;

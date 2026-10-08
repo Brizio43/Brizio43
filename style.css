@@ -29,3 +29,42 @@ footer a{color:var(--color-primary);text-underline-offset:4px}
 select{font:inherit;color:var(--color-text);background:var(--color-surface);padding:12px;border:1px solid var(--color-control-border);border-radius:var(--radius-sm);min-height:44px;max-width:100%}
 select:focus-visible{outline:3px solid var(--color-focus);outline-offset:3px}
 @media(max-width:650px){.image-source{padding:var(--space-4)}}
+
+/* Identity 1.1: blue structure, orange accents */
+body{background:radial-gradient(ellipse at 85% 0%,var(--color-primary-soft),transparent 55%),var(--color-canvas)}
+header{padding:22px 28px;border-bottom-color:var(--color-border)}
+.brand{color:var(--color-text);font-size:21px;gap:12px}
+.brand-mark{position:relative;display:grid;place-items:center;width:40px;height:40px;background:var(--color-primary);color:white;border-radius:12px;font:800 26px var(--font-heading)}
+.brand-mark span{position:absolute;right:-5px;top:-7px;color:var(--color-accent);font-size:22px;text-shadow:0 1px white}
+.tag{background:var(--color-surface);padding:9px 14px;border:1px solid var(--color-border);border-radius:30px}
+.hero{grid-template-columns:1.4fr 1fr;gap:48px;margin-bottom:32px}
+.hero h1{font-size:clamp(32px,4.4vw,52px);letter-spacing:-2px;line-height:1.17}
+.hero h1 span{color:var(--color-primary)}
+.hero .eyebrow{display:inline-block;background:var(--color-accent-soft);padding:8px 12px;border-radius:30px;letter-spacing:1px}
+.hero p{font-size:17px;margin-bottom:24px}
+#create{box-shadow:0 6px 16px rgb(36 85 219 / 20%);padding:15px 24px}
+.illustration{position:relative;min-height:290px;transform:none;background:var(--color-primary-soft);padding:35px 28px 25px;overflow:hidden;text-align:left;border:1px solid var(--color-border)}
+.study-sheet{position:relative;background:white;border-radius:18px;padding:24px;box-shadow:0 14px 28px rgb(23 39 71 / 10%);transform:rotate(-4deg);max-width:300px;margin:auto}
+.study-sheet .eyebrow{font-size:10px;color:var(--color-primary);background:transparent;padding:0}
+.study-sheet strong{font-size:25px;margin:14px 0;color:var(--color-text)}
+.study-line{height:7px;background:var(--color-primary-soft);border-radius:10px;width:85%;margin:9px 0}
+.study-line.short{width:55%}
+.study-check{display:flex;align-items:center;gap:9px;font-size:12px;color:var(--color-muted);margin-top:20px}
+.study-check span{display:grid;place-items:center;border-radius:8px;width:27px;height:27px;background:var(--color-accent-soft);color:var(--color-accent-text);font-weight:800}
+.study-orbit{position:absolute;right:10px;top:4px;font-size:65px;color:var(--color-accent);z-index:1;transform:rotate(15deg)}
+.study-note{position:relative;text-align:center;font-size:11px;font-weight:700;letter-spacing:.3px;color:var(--color-primary);margin-top:23px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;border-top:0;padding:0;margin-bottom:38px}
+.stats>div{position:relative;background:var(--color-surface);border:1px solid var(--color-border);border-radius:16px;padding:20px 24px;box-shadow:var(--shadow-card)}
+.stats>div::before{content:'';display:block;width:24px;height:4px;background:var(--color-primary);border-radius:4px;margin-bottom:13px}
+.stats>div:nth-child(2)::before{background:var(--color-accent)}
+.stats strong{font:800 30px var(--font-heading);margin-bottom:3px}
+.card{position:relative;padding:26px;transition:box-shadow var(--motion-fast),border-color var(--motion-fast)}
+.card:hover{border-color:var(--color-control-border);box-shadow:0 8px 24px rgb(23 39 71 / 8%)}
+.card h3{font-family:var(--font-heading);font-weight:800;margin-top:20px}
+.card .badge{color:var(--color-primary);border-radius:30px;padding:7px 12px}
+.badge{color:var(--color-primary)}
+.secondary{border-color:var(--color-border);background:var(--color-surface)}
+.image-source{background:var(--color-primary-soft);border-color:var(--color-border)}
+.image-source .badge{background:var(--color-accent-soft);color:var(--color-accent-text)}
+.section-top h2{font-weight:800}
+@media(max-width:650px){header{padding:18px 22px}.hero{grid-template-columns:1fr;gap:24px}.hero h1{font-size:36px;letter-spacing:-1.3px}.illustration{min-height:260px;padding:24px}.study-sheet{max-width:300px}.stats{gap:8px}.stats>div{padding:15px 10px}.stats strong{font-size:24px}.stats span{font-size:11px}.brand{font-size:19px}}
