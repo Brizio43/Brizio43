@@ -7,7 +7,8 @@ test('cada trecho gera os três tipos válidos com dicas e referências',()=>{
  const questions=questionsFromText(content);
  assert.equal(questions.length,9);
  assert.ok(validateQuiz({title:'Biologia',questions}));
- for(let i=0;i<questions.length;i+=3){const [mc,fill,description]=questions.slice(i,i+3);assert.deepEqual([mc.type,fill.type,description.type],['multiple','fill','descriptive']);assert.equal(mc.options[mc.answer],fill.answerText);assert.equal(fill.prompt.replace('Complete a frase de acordo com o material: ','').replace('_____',fill.answerText),fill.source);assert.equal(description.answerText,fill.source);assert.ok(content.includes(fill.source));assert.equal(new Set(mc.options).size,4);assert.ok(mc.hint&&fill.hint&&description.hint);}
+ for(let i=0;i<3;i++){const [mc,fill,description]=['multiple','fill','descriptive'].map(type=>questions.filter(q=>q.type===type)[i]);assert.deepEqual([mc.type,fill.type,description.type],['multiple','fill','descriptive']);assert.equal(mc.options[mc.answer],fill.answerText);assert.equal(fill.prompt.replace('Complete a frase de acordo com o material: ','').replace('_____',fill.answerText),fill.source);assert.equal(description.answerText,fill.source);assert.ok(content.includes(fill.source));assert.equal(new Set(mc.options).size,4);assert.ok(mc.hint&&fill.hint&&description.hint);}
+ assert.deepEqual(questions.map(q=>q.type),['multiple','multiple','multiple','fill','fill','fill','descriptive','descriptive','descriptive']);
 });
 test('usa todos os trechos, incluindo linhas, textos curtos e passagens longas',()=>{
  const lines=Array.from({length:15},(_,i)=>`Conceito ${i}: as plantas absorvem nutrientes.`).join('\n');
@@ -15,7 +16,7 @@ test('usa todos os trechos, incluindo linhas, textos curtos e passagens longas',
  assert.equal(questionsFromText('Raízes absorvem água.').length,3);
  assert.deepEqual(questionsFromText(''),[]);
  assert.deepEqual(questionsFromText(' *** '),[]);
- const long='As plantas absorvem nutrientes '.repeat(40);
+ const long=Array.from({length:80},(_,i)=>`conceito${i} absorve nutrientes${i}`).join(' ');
  const questions=questionsFromText(long);
  assert.equal(questions.filter(q=>q.type==='descriptive').map(q=>q.source).join(' '),long.trim());
 });

@@ -1,6 +1,6 @@
 # Design system — Quiz Estudo
 
-Versão 1.1. Referência visual: `design-system.html`. Tokens: `tokens.css`. Componentes compartilhados com o app: `style.css`. A página de referência não altera quizzes ou dados do usuário.
+Versão 1.2. Referência visual: `design-system.html`. Tokens: `tokens.css`. Componentes compartilhados com o app: `style.css`. A página de referência não altera quizzes ou dados do usuário.
 
 ## Direção
 
@@ -10,7 +10,7 @@ Uma interface calma, legível e acolhedora para criar questões e aprender com o
 
 Use variáveis semânticas, evitando cores literais em componentes novos. `--color-primary` indica ação; `--color-text` e `--color-muted` definem hierarquia; `--color-success` e `--color-danger` representam resultados. Superfícies usam `--color-surface` sobre `--color-canvas`. `--color-control-border` delimita campos; não use a borda sutil de cards em controles interativos.
 
-Manrope para títulos; DM Sans para corpo e controles. Ambas têm fallback system-ui. A aplicação continua utilizável se as fontes externas não carregarem. Escala de espaços: 4, 8, 12, 16, 20, 24, 32, 40 e 48 px. Raios: 8, 10, 14, 20 e 28 px. Use `--layout-reading` para fluxos de perguntas e `--layout-wide` para a biblioteca.
+Manrope para títulos; DM Sans para corpo e controles. Ambas têm fallback system-ui. A aplicação continua utilizável se as fontes externas não carregarem. Escala de espaços: 4, 8, 12, 16, 20, 24, 32, 40 e 48 px. Raios: 8, 10, 14, 24 e 36 px. Use `--layout-reading` para fluxos de perguntas e `--layout-wide` para a biblioteca.
 
 ## Componentes
 
@@ -45,3 +45,9 @@ Escreva ações com verbo e objeto: “Salvar quiz”. Para erros, explique a so
 ## Evolução
 
 Adicione tokens em tokens.css, componentes em style.css e seus exemplos nesta referência. Faça validação em desktop e celular e confira o fluxo de criação e resposta após alterações compartilhadas. A página usa os mesmos estilos do produto para evitar divergência.
+
+## Referência visual e navegação da prática
+
+A versão 1.2 usa https://onefin.framer.website/ como referência para gradientes luminosos, cabeçalho arredondado, superfícies translúcidas e composição de cartões sobrepostos. Mantém a marca Quiz Estudo, seu conteúdo e sua identidade azul e laranja.
+
+O mapa de questões usa grupos por tipo e estados com rótulos acessíveis: respondida (✓), pulada (↷), em branco (—) e pendente. Cor complementa os símbolos. O progresso conta questões confirmadas, sem avançar apenas por pular. A revisão final preserva a separação entre tipos e distingue erros de questões em branco.

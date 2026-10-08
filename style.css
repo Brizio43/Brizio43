@@ -72,3 +72,27 @@ header{padding:22px 28px;border-bottom-color:var(--color-border)}
 .image-source .badge{background:var(--color-accent-soft);color:var(--color-accent-text)}
 .section-top h2{font-weight:800}
 @media(max-width:650px){header{padding:18px 22px}.hero{grid-template-columns:1fr;gap:24px}.hero h1{font-size:36px;letter-spacing:-1.3px}.illustration{min-height:260px;padding:24px}.study-sheet{max-width:300px}.stats{gap:8px}.stats>div{padding:15px 10px}.stats strong{font-size:24px}.stats span{font-size:11px}.brand{font-size:19px}}
+
+/* OneFin-inspired light, layered surfaces; original blue/orange identity. */
+body{background:radial-gradient(ellipse at 10% 0%,#c5d6ff 0,transparent 34%),radial-gradient(ellipse at 95% 15%,#ffe1c2 0,transparent 32%),var(--color-canvas)}
+header{margin:18px auto 0;background:rgb(255 255 255 / 72%);border:1px solid white;border-radius:100px;box-shadow:0 6px 30px rgb(23 39 71 / 5%);max-width:1080px;padding:15px 25px;backdrop-filter:blur(16px)}
+.tag{background:var(--color-primary-soft);border:0}
+.hero{position:relative;background:radial-gradient(ellipse at 90% 10%,#b5caff,transparent 65%),linear-gradient(130deg,#fbfcff,#e5edff 60%,#ffe9d4);border:1px solid white;border-radius:36px;padding:48px 40px;gap:35px;box-shadow:0 18px 50px rgb(36 85 219 / 8%)}
+.hero h1{font-size:clamp(34px,4.5vw,56px);line-height:1.1;letter-spacing:-2.4px}
+.hero .eyebrow{background:rgb(255 255 255 / 75%);color:var(--color-primary);border:1px solid white;letter-spacing:1px}
+button,.button{border-radius:14px}
+#create{border-radius:100px;background:linear-gradient(145deg,#4178ff,var(--color-primary));border:1px solid #92adff;box-shadow:inset 0 1px 0 rgb(255 255 255 / 45%),0 5px 0 #193ca3,0 10px 25px rgb(36 85 219 / 22%)}
+#create:hover{background:var(--color-primary-hover)}
+.illustration{background:rgb(255 255 255 / 24%);border:1px solid rgb(255 255 255 / 85%);border-radius:32px;box-shadow:inset 0 0 40px rgb(255 255 255 / 25%);overflow:visible;min-height:340px;display:flex;flex-direction:column;justify-content:center}
+.study-sheet{border:5px solid var(--color-text);border-radius:30px;padding:28px 20px;box-shadow:0 20px 40px rgb(23 39 71 / 18%);transform:rotate(-7deg);background:linear-gradient(145deg,white,#eaf0ff);width:100%;max-width:260px}
+.study-sheet::before{content:'';display:block;width:55px;height:6px;border-radius:100px;background:var(--color-text);margin:0 auto 20px}
+.study-sheet::after{content:'3 formas de aprender';position:absolute;bottom:18px;right:-34px;background:white;padding:13px 16px;border-radius:18px;box-shadow:0 6px 20px rgb(23 39 71 / 12%);color:var(--color-accent-text);font-size:11px;font-weight:700;transform:rotate(10deg)}
+.study-check{padding-bottom:10px}.study-note{margin-top:22px;font-size:10px}.study-orbit{font-size:75px;top:2px;right:8px}
+.card,.panel{border-radius:24px}.stats>div{border-radius:20px}.exercise-heading{margin:32px 0 12px}.review-block{margin-top:28px}
+.block-label,.practice-bottom{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:20px}.practice-bottom{margin:25px 0 0;padding-top:20px;border-top:1px solid var(--color-border)}
+.map-details{border:1px solid var(--color-border);border-radius:18px;background:var(--color-surface);margin-bottom:20px;padding:16px 20px}.map-details summary{font-weight:600;cursor:pointer;color:var(--color-primary);min-height:28px}
+.question-map{margin:18px 0}.question-map h3{font-size:15px;margin:20px 0 10px}.question-map h3 span{color:var(--color-muted);font-size:12px;margin-left:6px}.question-numbers{display:flex;flex-wrap:wrap;gap:8px}
+.number{position:relative;display:flex;align-items:center;justify-content:center;gap:4px;min-width:46px;padding:10px;background:white;color:var(--color-primary);border:1px solid var(--color-control-border);border-radius:12px}
+.number:hover,.number.current{background:var(--color-primary-soft);color:var(--color-primary);border-color:var(--color-primary)}
+.number.answered{background:var(--color-primary);color:white}.number.skipped{background:var(--color-accent-soft);color:var(--color-accent-text);border-color:var(--color-accent)}.number.blank{background:var(--color-canvas);color:var(--color-muted)}.number.current{outline:2px solid var(--color-primary);outline-offset:2px}.number span{font-size:11px}
+@media(max-width:650px){header{margin:12px 16px 0;padding:14px 18px}.hero{padding:28px 22px;border-radius:28px;gap:30px}.hero h1{font-size:36px;letter-spacing:-1.5px}.hero p{font-size:15px}.illustration{min-height:310px;margin:0 5px}.study-sheet{max-width:230px}.study-sheet::after{right:-15px}.study-note{font-size:10px}.practice .panel{padding:18px}.practice-bottom{align-items:stretch}.actions button{max-width:100%}}

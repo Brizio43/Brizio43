@@ -1,13 +1,16 @@
+import {normalizeAnswer} from './quiz.js';
+import {groupedQuestions} from './quiz-session.js';
 // Deterministic exercises grounded in every nonempty passage of the source.
 export function questionsFromText(text) {
   const passages = String(text).split(/\n+/).flatMap(line => line.trim().split(/(?<=[.!?;])\s+/))
     .map(s=>s.replace(/\s+/g,' ').trim()).filter(s=>/[\p{L}\p{N}]/u.test(s));
   // Split long passages at word boundaries, retaining every word.
   const sentences=passages.flatMap(p=>{const parts=[];let part='';for(const word of p.split(' ')){if(part&&part.length+word.length>420){parts.push(part);part='';}part+=(part?' ':'')+word;}if(part)parts.push(part);return parts;});
+  const seen=new Set();const distinct=sentences.filter(sentence=>{const key=normalizeAnswer(sentence);if(seen.has(key))return false;seen.add(key);return true;});
   const stop = new Set('como para pela pelo pelas pelos entre sobre quando onde uma umas uns esse essa isso este esta são suas seus mais muito também porque assim dos das que com não'.split(' '));
   const words = s => [...s.matchAll(/\p{L}[\p{L}-]{2,}/gu)].filter(m => !stop.has(m[0].toLocaleLowerCase('pt-BR')));
-  const pool = [...new Map(sentences.flatMap(words).map(m => [m[0].toLocaleLowerCase('pt-BR'), m[0]])).values()];
-  return sentences.flatMap((sentence, i) => {
+  const pool = [...new Map(distinct.flatMap(words).map(m => [m[0].toLocaleLowerCase('pt-BR'), m[0]])).values()];
+  return groupedQuestions(distinct.flatMap((sentence, i) => {
     const candidates = words(sentence).sort((a,b) => b[0].length - a[0].length);
     const match=candidates[0] || [...sentence.matchAll(/\S+/g)][0];
     const answer=match[0], masked=sentence.slice(0,match.index)+'_____'+sentence.slice(match.index+answer.length);
@@ -21,7 +24,7 @@ export function questionsFromText(text) {
       {...common,type:'fill',prompt:'Complete a frase de acordo com o material: '+masked,answerText:answer,hint},
       {...common,type:'descriptive',prompt:'Explique com suas palavras a informação deste trecho: “'+sentence+'”',answerText:sentence,hint:'Identifique a ideia principal e explique como os conceitos do trecho se relacionam. Evite apenas copiar a frase.'}
     ];
-  });
+  }));
 }
 
 let library;

@@ -1,4 +1,4 @@
-/* Quiz Estudo · semantic design tokens · v1.1 */
+/* Quiz Estudo · semantic design tokens · v1.2 */
 :root {
   --color-primary: #2455db;
   --color-primary-hover: #1941b4;
@@ -45,8 +45,8 @@
   --radius-xs: 8px;
   --radius-sm: 10px;
   --radius-md: 14px;
-  --radius-lg: 20px;
-  --radius-xl: 28px;
+  --radius-lg: 24px;
+  --radius-xl: 36px;
   --shadow-card: 0 3px 12px rgb(23 39 71 / 6%);
   --motion-fast: 150ms ease;
   --layout-wide: 1064px;

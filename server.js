@@ -2,7 +2,7 @@ import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 const root = fileURLToPath(new URL('.', import.meta.url));
-const files = {'/':'index.html','/index.html':'index.html','/style.css':'style.css','/app.js':'app.js','/quiz.js':'quiz.js','/image-quiz.js':'image-quiz.js','/tokens.css':'tokens.css','/design-system.html':'design-system.html','/design-system.css':'design-system.css'};
+const files = {'/':'index.html','/index.html':'index.html','/style.css':'style.css','/app.js':'app.js','/quiz.js':'quiz.js','/quiz-session.js':'quiz-session.js','/image-quiz.js':'image-quiz.js','/tokens.css':'tokens.css','/design-system.html':'design-system.html','/design-system.css':'design-system.css'};
 for(const file of ['tesseract.min.js','worker.min.js','tesseract-core-lstm.wasm.js','tesseract-core-lstm.wasm','por.traineddata.gz']) files['/vendor/ocr/'+file]='vendor/ocr/'+file;
 createServer(async(req,res)=>{
  const file=files[new URL(req.url,'http://localhost').pathname];
