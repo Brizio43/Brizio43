@@ -2,10 +2,10 @@ import {normalizeAnswer} from './quiz.js';
 import {groupedQuestions} from './quiz-session.js';
 // Deterministic exercises grounded in every nonempty passage of the source.
 export function questionsFromText(text) {
-  const passages = String(text).split(/\n+/).flatMap(line => line.trim().split(/(?<=[.!?;])\s+/))
-    .map(s=>s.replace(/\s+/g,' ').trim()).filter(s=>/[\p{L}\p{N}]/u.test(s));
-  // Split long passages at word boundaries, retaining every word.
-  const sentences=passages.flatMap(p=>{const parts=[];let part='';for(const word of p.split(' ')){if(part&&part.length+word.length>420){parts.push(part);part='';}part+=(part?' ':'')+word;}if(part)parts.push(part);return parts;});
+  // OCR wraps a sentence onto several lines. Join those lines before splitting
+  // at sentence endings; semicolons and sentence length are not boundaries.
+  const normalized=String(text).replace(/\r/g,'').replace(/\s+/g,' ').trim();
+  const sentences=normalized.split(/(?<=[.!?…])\s+/).map(s=>s.trim()).filter(s=>/[\p{L}\p{N}]/u.test(s));
   const seen=new Set();const distinct=sentences.filter(sentence=>{const key=normalizeAnswer(sentence);if(seen.has(key))return false;seen.add(key);return true;});
   const stop = new Set('como para pela pelo pelas pelos entre sobre quando onde uma umas uns esse essa isso este esta são suas seus mais muito também porque assim dos das que com não'.split(' '));
   const words = s => [...s.matchAll(/\p{L}[\p{L}-]{2,}/gu)].filter(m => !stop.has(m[0].toLocaleLowerCase('pt-BR')));

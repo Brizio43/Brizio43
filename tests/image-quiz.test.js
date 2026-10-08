@@ -18,7 +18,8 @@ test('usa todos os trechos, incluindo linhas, textos curtos e passagens longas',
  assert.deepEqual(questionsFromText(' *** '),[]);
  const long=Array.from({length:80},(_,i)=>`conceito${i} absorve nutrientes${i}`).join(' ');
  const questions=questionsFromText(long);
- assert.equal(questions.filter(q=>q.type==='descriptive').map(q=>q.source).join(' '),long.trim());
+ assert.equal(questions.length,3);
+ assert.equal(questions.find(q=>q.type==='fill').source,long.trim());
 });
 test('lacunas ignoram acentos e caixa; descritivas não recebem nota automática',()=>{
  const questions=questionsFromText(content),fill=questions.find(q=>q.type==='fill'),description=questions.find(q=>q.type==='descriptive');
@@ -28,4 +29,11 @@ test('lacunas ignoram acentos e caixa; descritivas não recebem nota automática
  assert.equal(score([fill,description],['fotossintese',description.answerText]),1);
  assert.equal(validateQuiz({title:'Teste',questions:[{...fill,answerText:''}]}),false);
  assert.equal(validateQuiz({title:'Teste',questions:[{...description,type:'invalid'}]}),false);
+});
+
+test('uma frase longa, com quebras de OCR e ponto e vírgula gera uma única lacuna',()=>{
+ const source='A fotossíntese transforma energia luminosa\nem energia química; esse processo permite que as plantas\nproduzam nutrientes e sustentem o ecossistema.';
+ const fill=questionsFromText(source).filter(q=>q.type==='fill');
+ assert.equal(fill.length,1);
+ assert.equal(fill[0].prompt.replace('Complete a frase de acordo com o material: ','').replace('_____',fill[0].answerText),source.replace(/\s+/g,' '));
 });

@@ -51,3 +51,7 @@ Adicione tokens em tokens.css, componentes em style.css e seus exemplos nesta re
 A versão 1.2 usa https://onefin.framer.website/ como referência para gradientes luminosos, cabeçalho arredondado, superfícies translúcidas e composição de cartões sobrepostos. Mantém a marca Quiz Estudo, seu conteúdo e sua identidade azul e laranja.
 
 O mapa de questões usa grupos por tipo e estados com rótulos acessíveis: respondida (✓), pulada (↷), em branco (—) e pendente. Cor complementa os símbolos. O progresso conta questões confirmadas, sem avançar apenas por pular. A revisão final preserva a separação entre tipos e distingue erros de questões em branco.
+
+## Compartilhamento, ranking e recompensas
+
+Use `.share-panel` para convites, `.reward-unlock` para a conquista após um acerto, `.prize-card` e `.prize-icon` para a coleção e `.ranking` para posições na competição. Selos combinam o nome, a forma hexagonal e o símbolo; o texto explica o brinde e o XP. O ranking deve mostrar participante, pontos, acertos e tempo, incluindo em telas pequenas. Feedback de cópia e conquistas usa role=status.

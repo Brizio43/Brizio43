@@ -74,6 +74,14 @@ header{padding:22px 28px;border-bottom-color:var(--color-border)}
 @media(max-width:650px){header{padding:18px 22px}.hero{grid-template-columns:1fr;gap:24px}.hero h1{font-size:36px;letter-spacing:-1.3px}.illustration{min-height:260px;padding:24px}.study-sheet{max-width:300px}.stats{gap:8px}.stats>div{padding:15px 10px}.stats strong{font-size:24px}.stats span{font-size:11px}.brand{font-size:19px}}
 
 /* OneFin-inspired light, layered surfaces; original blue/orange identity. */
+.reward-summary{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:20px 24px;border:1px solid var(--color-border);border-radius:20px;background:linear-gradient(110deg,var(--color-primary-soft),var(--color-accent-soft));margin-bottom:28px}
+.reward-summary p{margin:6px 0 0}.competition-list{margin-bottom:32px}
+.reward-unlock{display:flex;gap:16px;align-items:center;border:1px solid var(--color-accent);background:var(--color-accent-soft);border-radius:16px;padding:18px;margin-top:18px}
+.reward-unlock>span{font-size:32px}.reward-unlock p{font-size:13px;margin:6px 0 0;color:var(--color-accent-text)}
+.prize-card{text-align:center;align-items:center}.prize-icon{font-size:54px;margin:16px}.share-panel textarea{font-size:13px;min-height:100px;overflow-wrap:anywhere}
+.prize-icon{display:grid;place-items:center;width:110px;height:110px;background:linear-gradient(145deg,var(--color-primary-soft),var(--color-accent-soft));clip-path:polygon(50% 0,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%)}
+.table-scroll{overflow-x:auto;max-width:100%}.ranking{width:100%;min-width:480px;border-collapse:collapse;margin-top:20px;font-size:14px}.ranking td,.ranking th{text-align:left;padding:14px 10px;border-bottom:1px solid var(--color-border)}.ranking th{color:var(--color-muted);font-size:12px}.ranking tbody tr:first-child{background:var(--color-accent-soft)}
+@media(max-width:650px){.ranking{min-width:0;table-layout:fixed;font-size:12px}.ranking th,.ranking td{padding:10px 4px;overflow-wrap:anywhere}.ranking th{font-size:11px}.ranking th:first-child{width:38px}.ranking th:nth-child(2){width:30%}.ranking th:nth-child(3){width:40px}}
 body{background:radial-gradient(ellipse at 10% 0%,#c5d6ff 0,transparent 34%),radial-gradient(ellipse at 95% 15%,#ffe1c2 0,transparent 32%),var(--color-canvas)}
 header{margin:18px auto 0;background:rgb(255 255 255 / 72%);border:1px solid white;border-radius:100px;box-shadow:0 6px 30px rgb(23 39 71 / 5%);max-width:1080px;padding:15px 25px;backdrop-filter:blur(16px)}
 .tag{background:var(--color-primary-soft);border:0}
