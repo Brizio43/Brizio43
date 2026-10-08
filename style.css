@@ -31,6 +31,10 @@ select:focus-visible{outline:3px solid var(--color-focus);outline-offset:3px}
 @media(max-width:650px){.image-source{padding:var(--space-4)}}
 
 /* Identity 1.1: blue structure, orange accents */
+.hint-button{margin:12px 0;background:var(--color-accent-soft);border-color:var(--color-accent);color:var(--color-accent-text)}
+.hint-button:hover{background:var(--color-accent-soft);border-color:var(--color-accent-text)}
+#written-answer{margin-bottom:20px}
+.feedback p{margin:10px 0;color:var(--color-text)}
 body{background:radial-gradient(ellipse at 85% 0%,var(--color-primary-soft),transparent 55%),var(--color-canvas)}
 header{padding:22px 28px;border-bottom-color:var(--color-border)}
 .brand{color:var(--color-text);font-size:21px;gap:12px}

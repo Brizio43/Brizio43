@@ -26,6 +26,8 @@ Manrope para títulos; DM Sans para corpo e controles. Ambas têm fallback syste
 | Feedback | `.feedback` | Resultado com explicação |
 | Aviso | `.notice` | Informação contextual |
 | Erro | `.error` + `aria-invalid` no campo | Descrever problema e correção |
+| Dica | `.hint-button`, `.notice` + aria-expanded/aria-controls | Ajuda contextual sem perder a resposta |
+| Resposta escrita | `#written-answer` (input ou textarea) | Lacuna e exercício descritivo |
 | Progresso | `.progress` com elemento filho | Andamento com atributos ARIA |
 
 Use elementos nativos: button para ações, a para navegação, label associado ao campo. Botões desativados usam disabled real. Alternativas selecionadas usam aria-pressed. As alternativas corretas e incorretas preservam sua indicação visual mesmo quando disabled.
