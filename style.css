@@ -21,3 +21,11 @@ h1,h2,h3,.card p,.badge{overflow-wrap:anywhere}
 .skip-link:focus{top:12px}
 footer a{color:var(--color-primary);text-underline-offset:4px}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+.image-source{padding:var(--space-6);margin-bottom:var(--space-8);background:var(--color-canvas);border:1px solid var(--color-border);border-radius:var(--radius-md)}
+.image-source h2{margin-top:var(--space-4)}
+.source-preview{display:block;max-width:100%;max-height:320px;object-fit:contain;margin-top:var(--space-4);border-radius:var(--radius-sm)}
+#source-text{min-height:160px}
+select{font:inherit;color:var(--color-text);background:var(--color-surface);padding:12px;border:1px solid var(--color-control-border);border-radius:var(--radius-sm);min-height:44px;max-width:100%}
+select:focus-visible{outline:3px solid var(--color-focus);outline-offset:3px}
+@media(max-width:650px){.image-source{padding:var(--space-4)}}
